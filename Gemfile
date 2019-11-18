@@ -54,3 +54,6 @@ gem 'friendly_id', '~> 5.1.0'
 
 # Environment variables
 gem 'dotenv-rails'
+
+# Postgresql
+gem 'pg'
