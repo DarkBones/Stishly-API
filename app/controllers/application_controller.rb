@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::API
   include ActionController::MimeResponds
   respond_to :json
+  
+  before_action :authenticate_user!
 
   def render_resource(resource)
     if resource.errors.empty?
@@ -22,5 +24,5 @@ class ApplicationController < ActionController::API
       ]
     }, status: :bad_request
   end
-  
+
 end
