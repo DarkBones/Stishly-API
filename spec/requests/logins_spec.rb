@@ -21,6 +21,16 @@ RSpec.describe "Logins", type: :request do
       it 'returns 200' do
         expect(response).to have_http_status(200)
       end
+
+      it 'returns JTW token in authorization header' do
+        expect(response.headers['Authorization']).to be_present
+      end
+
+      it 'returns valid JWT token' do
+        decoded_token = decoded_jwt_token_from_response(response)
+        expect(decoded_token.first['sub']).to be_present
+      end
+
     end
 
   end

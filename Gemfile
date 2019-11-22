@@ -53,6 +53,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Devise authentication
 gem 'devise'
 gem 'devise-jwt', '~> 0.5.9'
+gem 'api_guard'
 
 # Friendly IDs
 gem 'friendly_id', '~> 5.1.0'
