@@ -6,7 +6,11 @@ class RegistrationsController < Devise::RegistrationsController
     build_resource(sign_up_params)
 
     resource.save
-    render_resource(resource)
+    if resource.errors.empty?
+      render json: request.env['warden-jwt_auth.token']
+    else
+      validation_error(resource)
+    end
   end
 
 private

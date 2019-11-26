@@ -63,3 +63,6 @@ gem 'dotenv-rails'
 
 # Postgresql
 gem 'pg'
+
+# CORS
+gem 'rack-cors', require: 'rack/cors'

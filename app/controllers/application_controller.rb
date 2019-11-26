@@ -25,4 +25,10 @@ class ApplicationController < ActionController::API
     }, status: :bad_request
   end
 
+private
+
+  def authenticate_user!(*args)
+    super
+  end
+
 end
