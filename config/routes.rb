@@ -7,6 +7,9 @@ Rails.application.routes.draw do
           get '/', to: 'users#show'
         end
       end
+      scope 'accounts' do
+        get '/', to: 'accounts#index'
+      end
     end
   end
 
